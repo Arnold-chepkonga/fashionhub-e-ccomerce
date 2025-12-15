@@ -1,0 +1,98 @@
+[
+  {
+    "id": "1",
+    "name": "Classic Denim Jacket",
+    "price": 89.99,
+    "category": "mens",
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=400&fit=crop",
+    "description": "A timeless denim jacket perfect for any casual outfit. Made with premium quality denim fabric."
+  },
+  {
+    "id": "2",
+    "name": "Leather Sneakers",
+    "price": 129.99,
+    "category": "mens",
+    "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop",
+    "description": "Comfortable leather sneakers with modern design. Perfect for everyday wear."
+  },
+  {
+    "id": "3",
+    "name": "Casual T-Shirt",
+    "price": 29.99,
+    "category": "mens",
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop",
+    "description": "Soft cotton t-shirt in multiple colors. A wardrobe essential."
+  },
+  {
+    "id": "4",
+    "name": "Summer Dress",
+    "price": 79.99,
+    "category": "womens",
+    "image": "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&h=400&fit=crop",
+    "description": "Elegant summer dress with floral patterns. Perfect for warm weather."
+  },
+  {
+    "id": "5",
+    "name": "Floral Blouse",
+    "price": 54.99,
+    "category": "womens",
+    "image": "https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=400&h=400&fit=crop",
+    "description": "Beautiful floral blouse made from breathable fabric. Ideal for office or casual wear."
+  },
+  {
+    "id": "6",
+    "name": "High-Waist Jeans",
+    "price": 69.99,
+    "category": "womens",
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=400&h=400&fit=crop",
+    "description": "Stylish high-waist jeans with a perfect fit. Comfortable and trendy."
+  },
+  {
+    "id": "7",
+    "name": "Kids Hoodie",
+    "price": 39.99,
+    "category": "children",
+    "image": "https://images.unsplash.com/photo-1503944583220-79d8926ad5e2?w=400&h=400&fit=crop",
+    "description": "Cozy hoodie for kids. Soft fabric with fun designs."
+  },
+  {
+    "id": "8",
+    "name": "Kids Sneakers",
+    "price": 49.99,
+    "category": "children",
+    "image": "https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=400&h=400&fit=crop",
+    "description": "Comfortable sneakers for active kids. Durable and stylish."
+  },
+  {
+    "id": "9",
+    "name": "Kids T-Shirt Set",
+    "price": 34.99,
+    "category": "children",
+    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=400&h=400&fit=crop",
+    "description": "Set of colorful t-shirts for kids. Made from soft cotton."
+  },
+  {
+    "id": "10",
+    "name": "Leather Wallet",
+    "price": 45.99,
+    "category": "accessories",
+    "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=400&h=400&fit=crop",
+    "description": "Premium leather wallet with multiple card slots. Slim and elegant design."
+  },
+  {
+    "id": "11",
+    "name": "Sunglasses",
+    "price": 89.99,
+    "category": "accessories",
+    "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=400&fit=crop",
+    "description": "Stylish sunglasses with UV protection. Perfect for sunny days."
+  },
+  {
+    "id": "12",
+    "name": "Canvas Backpack",
+    "price": 59.99,
+    "category": "accessories",
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop",
+    "description": "Durable canvas backpack with multiple compartments. Great for daily use."
+  }
+]
