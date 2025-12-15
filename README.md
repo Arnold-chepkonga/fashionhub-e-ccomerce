@@ -142,6 +142,34 @@ Products are stored in `app/data/products.json` with the following structure:
 - **Expo Router**: File-based routing for easy navigation
 - **Responsive Design**: Mobile-first approach
 
+## Security Notes
+
+This is a demo application with mock authentication. In a production environment, you should:
+
+1. **Authentication**: Replace mock authentication with a secure backend API
+   - Current implementation uses predefined admin emails for demo purposes
+   - Implement proper JWT token-based authentication
+   - Use secure password hashing (bcrypt, argon2)
+
+2. **Data Storage**: Replace JSON-based storage with a proper database
+   - Current products are stored in a JSON file
+   - Use a backend database (PostgreSQL, MongoDB, etc.)
+   - Implement proper CRUD operations via API
+
+3. **Payment Processing**: Integrate a real payment gateway
+   - Current checkout is mocked
+   - Use Stripe, PayPal, or similar services
+   - Implement proper payment security and PCI compliance
+
+4. **Input Validation**: Add server-side validation
+   - Current validation is client-side only
+   - Implement server-side validation for all inputs
+   - Sanitize user inputs to prevent injection attacks
+
+5. **Environment Variables**: Use environment variables for sensitive data
+   - Store API keys and secrets in .env files
+   - Never commit sensitive data to version control
+
 ## Production Deployment
 
 The app is ready for deployment to:
