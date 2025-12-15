@@ -7,7 +7,7 @@ import { useProducts } from '../context/ProductContext';
 import { ProductCard } from '../components/ProductCard';
 import { CategoryNavbar } from '../components/CategoryNavbar';
 import { ProductModal } from '../components/ProductModal';
-import { Product } from '../context/ProductContext';
+import { Product } from '../types';
 
 export default function HomeScreen() {
   const { colors } = useTheme();

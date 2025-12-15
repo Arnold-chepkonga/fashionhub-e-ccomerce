@@ -1,8 +1,8 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet, Animated } from 'react-native';
+import { View, Text, Image, TouchableOpacity, StyleSheet, Animated, GestureResponderEvent } from 'react-native';
 import { useTheme } from '../context/ThemeContext';
 import { useCart } from '../context/CartContext';
-import { Product } from '../context/ProductContext';
+import { Product } from '../types';
 
 interface ProductCardProps {
   product: Product;
@@ -28,7 +28,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onPress }) =>
     }).start();
   };
 
-  const handleAddToCart = (e: any) => {
+  const handleAddToCart = (e: GestureResponderEvent) => {
     e.stopPropagation();
     addToCart(product);
   };

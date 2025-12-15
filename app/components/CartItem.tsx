@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { useTheme } from '../context/ThemeContext';
-import { CartItem as CartItemType } from '../context/CartContext';
+import { CartItem as CartItemType } from '../types';
 
 interface CartItemProps {
   item: CartItemType;

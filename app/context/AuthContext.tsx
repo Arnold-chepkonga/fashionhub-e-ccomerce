@@ -1,11 +1,5 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
-
-export interface User {
-  id: string;
-  email: string;
-  name: string;
-  isAdmin?: boolean;
-}
+import { User } from '../types';
 
 interface AuthContextType {
   user: User | null;
@@ -17,13 +11,16 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
+// List of admin emails for demo purposes
+const ADMIN_EMAILS = ['admin@fashionhub.com', 'admin@test.com'];
+
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
 
   const login = async (email: string, password: string): Promise<boolean> => {
     // Mock authentication - In production, this would call an API
     if (email && password.length >= 6) {
-      const isAdmin = email.includes('admin');
+      const isAdmin = ADMIN_EMAILS.includes(email.toLowerCase());
       setUser({
         id: '1',
         email,

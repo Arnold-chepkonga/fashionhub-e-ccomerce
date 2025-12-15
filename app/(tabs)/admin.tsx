@@ -12,7 +12,8 @@ import {
   Image,
 } from 'react-native';
 import { useTheme } from '../context/ThemeContext';
-import { useProducts, Product } from '../context/ProductContext';
+import { useProducts } from '../context/ProductContext';
+import { Product } from '../types';
 
 export default function AdminScreen() {
   const { colors } = useTheme();

@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import { useTheme } from '../context/ThemeContext';
 import { useCart } from '../context/CartContext';
-import { Product } from '../context/ProductContext';
+import { Product } from '../types';
 
 interface ProductModalProps {
   product: Product | null;

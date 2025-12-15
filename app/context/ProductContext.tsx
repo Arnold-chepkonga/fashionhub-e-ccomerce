@@ -1,14 +1,6 @@
-import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
+import React, { createContext, useContext, useState, ReactNode, useRef } from 'react';
 import productsData from '../data/products.json';
-
-export interface Product {
-  id: string;
-  name: string;
-  price: number;
-  category: string;
-  image: string;
-  description: string;
-}
+import { Product } from '../types';
 
 interface ProductContextType {
   products: Product[];
@@ -24,13 +16,15 @@ const ProductContext = createContext<ProductContextType | undefined>(undefined);
 
 export const ProductProvider = ({ children }: { children: ReactNode }) => {
   const [products, setProducts] = useState<Product[]>(productsData as Product[]);
+  const idCounter = useRef(1000); // Start from 1000 to avoid conflicts with existing IDs
 
   const categories = ['mens', 'womens', 'children', 'accessories'];
 
   const addProduct = (product: Omit<Product, 'id'>) => {
+    idCounter.current += 1;
     const newProduct: Product = {
       ...product,
-      id: Date.now().toString(),
+      id: `product-${idCounter.current}`,
     };
     setProducts(prev => [...prev, newProduct]);
   };
