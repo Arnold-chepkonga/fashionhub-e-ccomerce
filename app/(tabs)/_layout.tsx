@@ -61,15 +61,14 @@ export default function TabLayout() {
           ),
         }}
       />
-      {user?.isAdmin && (
-        <Tabs.Screen
-          name="admin"
-          options={{
-            title: 'Admin',
-            tabBarIcon: ({ color }) => <TabBarIcon name="cog" color={color} />,
-          }}
-        />
-      )}
+      <Tabs.Screen
+        name="admin"
+        options={{
+          title: 'Admin',
+          tabBarIcon: ({ color }) => <TabBarIcon name="cog" color={color} />,
+          href: user?.isAdmin ? '/admin' : null,
+        }}
+      />
       <Tabs.Screen
         name="profile"
         options={{
