@@ -1,14 +1,14 @@
 # FashionHub E-Commerce App
 
-A production-ready cross-platform e-commerce application built with React Native, Expo Router, and TypeScript.
+A production-ready cross-platform e-commerce application built with React Native, Expo Router, TypeScript, and **Firebase**.
 
 ## Features
 
 ### 🔐 Authentication
+- **Firebase Authentication** with email/password
 - Login and Signup screens with input validation
-- Email and password validation
-- Mock authentication system (ready for API integration)
-- Admin user detection
+- Persistent authentication state
+- Admin user detection with configurable admin emails
 
 ### 🏠 Home Screen
 - Category navigation (Mens, Womens, Children, Accessories)
@@ -29,11 +29,11 @@ A production-ready cross-platform e-commerce application built with React Native
 - Remove items from cart
 - Real-time total price calculation
 - Badge showing number of items in cart
-- Mock checkout process
+- Checkout process
 
 ### 👨‍💼 Admin Panel
-- Add new products
-- Edit existing products
+- Add new products to Firestore
+- Edit existing products in real-time
 - Delete products
 - Category management
 - Image URL support
@@ -45,9 +45,17 @@ A production-ready cross-platform e-commerce application built with React Native
 - Clean, modern styling
 - Rounded corners and quality visuals
 
+### 🔥 Firebase Backend
+- **Firebase Authentication** for user management
+- **Firestore Database** for products and user data
+- Real-time data synchronization
+- Secure data access with Firestore security rules
+- Scalable cloud infrastructure
+
 ## Tech Stack
 
 - **Framework**: React Native with Expo Router
+- **Backend**: Firebase (Authentication + Firestore)
 - **Language**: TypeScript
 - **State Management**: Context API (Auth, Cart, Theme, Products)
 - **Navigation**: Expo Router (file-based routing)
@@ -85,6 +93,8 @@ app/
 
 ## Installation & Setup
 
+### Quick Start (Without Firebase)
+
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
@@ -106,9 +116,46 @@ app/
    - **iOS**: Press `i` or run `npm run ios` (requires macOS)
    - **Android**: Press `a` or run `npm run android` (requires Android Studio)
 
+### Firebase Setup (Recommended)
+
+For full backend functionality with real authentication and database:
+
+1. **Follow the Firebase Setup Guide**
+   - See [FIREBASE_SETUP.md](./FIREBASE_SETUP.md) for detailed instructions
+
+2. **Create Firebase Project**
+   - Go to [Firebase Console](https://console.firebase.google.com/)
+   - Create a new project
+   - Enable Email/Password authentication
+   - Create a Firestore database
+
+3. **Configure Environment Variables**
+   ```bash
+   cp .env.example .env
+   # Edit .env and add your Firebase credentials
+   ```
+
+4. **Initialize Products**
+   - Run the app and navigate to `/setup`
+   - Click "Initialize Products" to populate Firestore
+   - Or skip if you already have products
+
+5. **Create Admin User**
+   - Sign up with email: `admin@fashionhub.com`
+   - This user will have admin privileges
+
 ## Usage
 
-### Default Login Credentials
+### With Firebase
+
+- **Admin Login**: Use `admin@fashionhub.com` or `admin@test.com` (configured in `.env`)
+- **Regular Users**: Sign up with any email address
+- **Product Management**: Admins can add/edit/delete products in real-time
+- **Authentication**: Persistent login across sessions
+
+### Without Firebase (Demo Mode)
+
+- **Default Login Credentials**
 
 - **Regular User**: Any email with password (min 6 characters)
 - **Admin User**: Use email containing "admin" (e.g., admin@test.com)
